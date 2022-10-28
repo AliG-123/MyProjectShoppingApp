@@ -23,8 +23,11 @@ This is the my final project(Shopping API) of QA Software Development Bootcamp w
 ## Possible improvements for future revisions of the project.
 
 ## Database
-* User Table Structure
+<details>
+<summary> User Table Structure </summary>
+![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final20Project20Shopping20App/UserDatabaseStructure.png?raw=true)
 
+</details>
 * Product Table Structure
 
 ## Methods
