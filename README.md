@@ -4,15 +4,13 @@
 
 This is the my final project(Shopping API) of QA Software Development Bootcamp where we are implementing our learnings during the 10 weeks training.  The project require us to create a working Spring Boot API. With this, we will be able to test our understanding in the following:
 
-* Agile & Project Management (Git, Jira)
+* Agile & Project Management (Git)
 
-* Databases & Cloud Fundamentals (H2, MySQL)
+* Databases & Cloud Fundamentals (MySQL)
 
 * Programming Fundamentals (Java)
 
 * API Development (Spring Boot)
-
-* Automated Testing (JUnit, Mockito)
 
 * API Calls using Postman
 
@@ -110,7 +108,9 @@ This is the my final project(Shopping API) of QA Software Development Bootcamp w
 
 <details>
 <summary> Update </summary>
-  
+
+<details>
+  <summary> Updating User Details </summary>
 >Update User Details Page (Only for logged in user) - GET Method
   
 ![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/ChangeAccountDetailsPage.png?raw=true)
@@ -128,8 +128,37 @@ This is the my final project(Shopping API) of QA Software Development Bootcamp w
 >MySQL after update
   
 ![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/PostmanMySQLAfterUpdate.png?raw=true)
-</details>
 
+  </details>
+  
+  <details>
+  <summary> Shopping </summary>
+>Shop Page (Only for logged in user) - GET Method
+  
+![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/PostmanShopPage.png?raw=true)
+
+  
+>User purchasing item from shop - POST method
+  
+![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/PostmanShopping.png?raw=true)
+
+  </details>
+  
+  <details>
+    
+  <summary> Admin Updating product stock </summary>
+   
+  > Stock Page Before - GET method
+    
+  ![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/AddStockBefore.png?raw=true)
+    
+  > Stock Page After - POST method
+    
+  ![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/AddStockAfter.png?raw=true)
+  
+  
+  </details>
+  
 <details>
 <summary> Delete </summary>
  
@@ -143,7 +172,8 @@ This is the my final project(Shopping API) of QA Software Development Bootcamp w
   
 > Delete Account corrent Credentials Entered
 ![](https://raw.githubusercontent.com/AliG-123/MyProjectShoppingApp/main/Final%20Project%20Shopping%20App/PostmanAccountDeleted.png) 
-  
+ 
+
 </details>
 
 
