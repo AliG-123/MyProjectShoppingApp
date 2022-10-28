@@ -59,7 +59,40 @@ The future improvement for this Shopping API will be to include testing and achi
  
   
 ## Methods available in API
-## Postman with ScreenShots
+
+The homepage is a login page where a user can login to their account or go to another page to register and create an account.
+
+To create an account user must enter the following fields:
+* Username
+* Password
+* First Name
+* Last Name (This is not stored)
+* Email
+
+Data is then stored in MySQL database and the user is given the role "user" and an account balance of £100
+
+The user can login if an account exists in the database and they will be taken to a normal user page or an admin page depending on if they have the role "user" or "admin"
+
+<details>
+<summary>User APIs</summary>
+
+> -	 Welcome User Page (Account details are shown) with navigation bar to go to other links on the website whilst user is logged in
+> -	 View Account Balance - User can view there account balance
+> -  Buy Products - The user can buy from the shop which displays all the items in the shop and the prices and stock count. If they purchase any item, their account balance will be reduced, the stock count of the item purchased will reduce, and a message is displayed to confirm their purchase of said item.
+> -	Change Account Details - The user can go to this page to change the details of their account. They can change the following: Password, First Name, and Email. If they successfully update they will be prompted that details have been updated and can continue navigating on the site.
+> -	Delete Account- The user can delete there account but they must confirm the current password on their account and if it is incorrect then user will recieve a "Incorrect password" messsage. If the user enters the correct password, their account will be deleted and they will be directed back to the login page
+> - Logout - When the user clicks logout the session is invalidated (session stores logged in user) and they will be redirected to the login page. They will no longer be able to access any of the links above.
+</details>
+
+<details>
+<summary> Admin APIs </summary>
+> -	 Welcome Admin Page (Account details are shown) with navigation bar to go to other links on the website whilst admin is logged in
+> -	
+> -
+> -	
+> - Logout - When the user clicks logout the session is invalidated (session stores logged in user) and they will be redirected to the login page. They will no longer be able to access any of the links above.
+</details>
+## Screenshots: POSTMAN requests and utput from the API and MySQL database
 <details>
 <summary> Create </summary>
 
@@ -199,8 +232,6 @@ The future improvement for this Shopping API will be to include testing and achi
 </details>
 
 
-## Screenshots showing your postman requests and the output from the API.
 
-## Screenshots of your database to prove that data is being persisted.
 
 
