@@ -61,11 +61,11 @@ This is the my final project(Shopping API) of QA Software Development Bootcamp w
 ### Postman
 <details>
 <summary> Create </summary>
-    <summary>Registration - Creates user if username doesn't exist in the database.</summary>
-  ![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/PostmanRegisterUser.png?raw=true)
-    <summary>MYSQL database showing new user </summary>
+> Registration - Creates user if username doesn't exist in the database.
+  ![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/PostmanRegisterUser.png?raw=true) 
+  > MYSQL database showing new user
  ![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/PostmanMySQLBeforeUpdate.png?raw=true)
-  </details>
+</details>
   
 > Add Product - When Admin adds new product to product database 
 </details>
