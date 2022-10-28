@@ -84,13 +84,22 @@ This is the my final project(Shopping API) of QA Software Development Bootcamp w
   
   >View all users page when Admin has logged in- GET method
   
-![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/PostmanLogin.png?raw=true)
+![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/PostmanViewAllUsers.png?raw=true)
   
 
 </details>
+
 <details>
 <summary> Update </summary>
+  
+>Update User Details Page (Only for logged in user)>
+  
+![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/ChangeAccountDetailsPage.png?raw=true)
+
+>Change Details (Only for logged in user)>
+ 
 </details>
+
 <details>
 <summary> Delete </summary>
 </details>
