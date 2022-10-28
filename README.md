@@ -158,7 +158,6 @@ This is the my final project(Shopping API) of QA Software Development Bootcamp w
   
   
   </details>
-   </details>
   
   <details>
     
