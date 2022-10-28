@@ -58,10 +58,12 @@ This is the my final project(Shopping API) of QA Software Development Bootcamp w
  
   
 ## Methods available in API
-### Postman
+## Postman with ScreenShots
 <details>
 <summary> Create </summary>
-  
+
+<details>
+  <summary> Registration </summary>
 > Registration - Creates user if username doesn't exist in the database.
   
   ![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/PostmanRegisterUser.png?raw=true) 
@@ -70,10 +72,27 @@ This is the my final project(Shopping API) of QA Software Development Bootcamp w
   
  ![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/PostmanMySQLBeforeUpdate.png?raw=true)
   
-</details>
+</details> 
+
+  <details>
   
-> Add Product - When Admin adds new product to product database 
+  <summary> Adding Products to Shop </summary>
+   
+  > Add Product Page
+    
+   ![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/addproductpage.png?raw=true)
+    
+  > Adding Product
+    
+  ![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/PostmanAddedProduct.png?raw=true)
+    
+  > MySQL showing product has been added
+    
+  ![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/MySQLProductAdded.png?raw=true)
+    
+  </details>
 </details>
+
 
 <details>
 <summary> Read </summary>
@@ -122,3 +141,5 @@ This is the my final project(Shopping API) of QA Software Development Bootcamp w
 ## Screenshots showing your postman requests and the output from the API.
 
 ## Screenshots of your database to prove that data is being persisted.
+
+
