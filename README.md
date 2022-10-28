@@ -16,6 +16,27 @@ This is the my final project(Shopping API) of QA Software Development Bootcamp w
 
 * API Calls using Postman
 
+<details>
+<summary>Project Requirements</summary>
+
+> -	Code fully integrated into a Version Control System 
+> -	A relational database, locally or within the Cloud, which is used to persist data for the project.
+> -	A functional application ‘back-end’, written in a suitable framework of the language covered in training (Java/Spring Boot)
+> -	A build (.jar) of your application, including any dependencies it might need, produced using an integrated build tool (Maven).
+> -	A series of API calls designed with postman, used for CRUD functionality. (Create, Read, Update, Delete)
+</details>
+
+<details>
+<summary> Tech Stack </summary>
+
+- Version Control System: **Git**
+- Source Code Management: **Github**
+- Database Management System: **MySQL**
+- Core Language: **Java**
+- API Dev platform: **Spring**
+- Build Tool: **Maven**
+</details>
+
 ## How I expected the challenge to go.
 
 ## What went well? / What didn't go as planned?
@@ -36,12 +57,28 @@ This is the my final project(Shopping API) of QA Software Development Bootcamp w
 </details>
  
   
-## Methods
+## Methods available in API
+### Postman
+<details>
+<summary> Create </summary>
+    <summary>Registration - Creates user if username doesn't exist in the database.</summary>
+  ![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/PostmanRegisterUser.png?raw=true)
+    <summary>MYSQL database showing new user </summary>
+ ![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/PostmanMySQLBeforeUpdate.png?raw=true)
+  </details>
+  
+> Add Product - When Admin adds new product to product database 
+</details>
+<details>
+<summary> Read </summary>
+</details>
+<details>
+<summary> Update </summary>
+</details>
+<details>
+<summary> Delete </summary>
+</details>
 
-* Create
-* Read
-* Update
-* Delete
 
 ## Screenshots showing your postman requests and the output from the API.
 
