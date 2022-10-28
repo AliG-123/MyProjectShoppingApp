@@ -86,13 +86,17 @@ The user can login if an account exists in the database and they will be taken t
 
 <details>
 <summary> Admin APIs </summary>
+  
 > -	 Welcome Admin Page (Account details are shown) with navigation bar to go to other links on the website whilst admin is logged in
 > -	 Replenish Stock - If admin accesses this api they will be able to view the current products in the shop and will be able to update the stock count of any of the items by clicking add stock which will add 1 to the stock count of the item and the page will be updated to show the new stock count. They will be prompted of a message to confirm which items stock count has been updated. 
 > - View Users - On this admin api the admin can view all the users present on the database and change the roles of the a user from "user" to "admin" or vice versa. They will be prompted which user's role has been changed.
 > -	Add products - This API displays the shop and all the products in the shop with the product details. The admin can add an item to the shop by inserting data of productID,uniCount,Price, and product name in the fields and click the add product button. This will add the product to the database and the page will be refreshed to show the shop with the new product added.
 > - Logout - When the user clicks logout the session is invalidated (session stores logged in user) and they will be redirected to the login page. They will no longer be able to access any of the links above.
+
 </details>
+
 ## Screenshots: POSTMAN requests and utput from the API and MySQL database
+
 <details>
 <summary> Create </summary>
 
