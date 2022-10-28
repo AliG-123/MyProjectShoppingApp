@@ -35,17 +35,7 @@ public class UserDao {
 
 	}
 
-//	public void createUser(String username, String password, String firstName, String lastName, String email) throws Exception {
-//		Connection conn = DBUtils.getConnection();
-//		PreparedStatement pstmt = conn.prepareStatement("insert into users values (?,?,?,?,?) ");
-//		pstmt.setString(1, username);
-//		pstmt.setString(2, password);
-//		pstmt.setString(3, firstName);
-//		pstmt.setString(4, email);
-//		pstmt.setString(5, "user");
-//		pstmt.execute();
-//
-//	}
+
 	public void createUser(User user) throws Exception {
 		Connection conn = DBUtils.getConnection();
 		PreparedStatement pstmt = conn.prepareStatement("insert into users values (?,?,?,?,?,?) ");
