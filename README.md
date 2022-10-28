@@ -92,16 +92,30 @@ This is the my final project(Shopping API) of QA Software Development Bootcamp w
 <details>
 <summary> Update </summary>
   
->Update User Details Page (Only for logged in user)>
+>Update User Details Page (Only for logged in user) - GET Method
   
 ![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/ChangeAccountDetailsPage.png?raw=true)
 
->Change Details (Only for logged in user)>
+>Change Details (Only for logged in user) - POST Method
+  
+![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/PostmanAccountUpdated.png?raw=true)
  
 </details>
 
 <details>
 <summary> Delete </summary>
+ 
+> Delete Account Page Before (Deletes only Logged IN users account)
+
+![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/PostmanDeleteAccountPageBefore.png?raw=true) 
+  
+> Delete Account Wrong Credentials Entered
+
+![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/PostmanDeleteAccountWrongPassword.png?raw=true)
+  
+> Delete Account corrent Credentials Entered
+![](https://raw.githubusercontent.com/AliG-123/MyProjectShoppingApp/main/Final%20Project%20Shopping%20App/PostmanAccountDeleted.png) 
+  
 </details>
 
 
