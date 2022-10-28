@@ -27,7 +27,7 @@ This is the my final project(Shopping API) of QA Software Development Bootcamp w
 <summary> User Database Structure </summary>
   
 ![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/UserDatabaseStructure.png?raw=true)
-</details
+</details>
  
 <details>
 <summary> Product Database Structure </summary>
