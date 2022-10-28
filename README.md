@@ -25,11 +25,10 @@ This is the my final project(Shopping API) of QA Software Development Bootcamp w
 ## Database
 <details>
 <summary> User Table Structure </summary>
-![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final20Project20Shopping20App/UserDatabaseStructure.png?raw=true)
-
-</details>
-* Product Table Structure
-
+  
+![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/FinalProjectShoppingApp/UserDatabaseStructure.png?raw=true)
+ </details
+  
 ## Methods
 
 * Create
