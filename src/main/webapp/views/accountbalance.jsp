@@ -11,7 +11,7 @@
 <title>Account Balance</title>
 </head>
 <body>
-<div style = "font-size:40px">
+<div style = "font-size:25px">
 <div class="card text-center">
   <div class="card-header">
     <ul class="nav nav-pills card-header-pills">
@@ -37,8 +37,12 @@
   </div>
   <div> 
   </div>
+  <div style="font-size:30px" align = "right">
+  <a style = "color: blue">Logged in User: </a>
+  <a style = "color: red">${user.username}</a>
+  </div>
 <h1 align = "center" >
-Your account balance is : £ ${user.accountBalance}
+Your account balance is : £${user.accountBalance}
 </h1>
 
 <h4 align = "center" ><a href="/"> Return to main menu </a></h4>

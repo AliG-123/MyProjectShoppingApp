@@ -6,6 +6,7 @@ public class User {
 	String firstName;
 	String email;
 	double accountBalance = 100;
+	String role;
 	
 	
 	User(){
@@ -27,6 +28,27 @@ public class User {
 		this.firstName = firstName;
 		this.email = email;
 		this.accountBalance = accountBalance;
+	}
+
+
+	public User(String username, String password, String firstName, String email, String role, double accountBalance) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.firstName = firstName;
+		this.email = email;
+		this.role = role;
+		this.accountBalance = accountBalance;
+	}
+
+
+	public String getRole() {
+		return role;
+	}
+
+
+	public void setRole(String role) {
+		this.role = role;
 	}
 
 

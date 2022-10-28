@@ -17,7 +17,7 @@
 <body>
 	
 		<div class="card text-center">
-  <div style="font-size:40px"class="card-header">
+  <div style="font-size:25px"class="card-header">
     <ul class="nav nav-pills card-header-pills">
     <li class="nav-item">
         <a class="nav-link" href="#">Home</a>
@@ -38,6 +38,10 @@
         <a class="nav-link" href="/logout">Log out</a>
       </li>
     </ul>
+  </div>
+  <div style="font-size:25px" align = "right">
+  <a style = "color: blue">Logged in User: </a>
+  <a style = "color: red">${user.username}</a>
   </div>
 
 <h1 align = "center">Account Deletion Page</h1><br><br>

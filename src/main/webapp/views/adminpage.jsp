@@ -17,22 +17,19 @@
 <body>
 	
 		<div class="card text-center">
-  <div style="font-size:25px"class="card-header">
+  <div style="font-size:40px"class="card-header">
     <ul class="nav nav-pills card-header-pills">
     <li class="nav-item">
-        <a class="nav-link active" href="#">Home</a>
+        <a class="nav-link active" href="/welcome">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/shop">Buy Products</a>
+        <a class="nav-link" href="/stocks">Replenish Stock</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/accountbalance">View account balance</a>
+        <a class="nav-link" href="/viewallusers">View Users</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/changedetails"> Change account details</a>
-      </li>
-      <li class="nav-item">
-<a class="nav-link" href="deleteaccountpage">Delete Account</a>
+		<a class="nav-link" href="addProduct">Add Products</a>
       </li>
         <li class="nav-item">
         <a class="nav-link" href="/logout">Log out</a>

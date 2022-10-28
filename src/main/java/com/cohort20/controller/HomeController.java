@@ -40,41 +40,38 @@ public class HomeController {
 		return "index";
 	}
 
+	//This mapping takes you to registration page when user clicks register instead of login
 	@RequestMapping("/registrationPage")
 	public String registrationPage() {
 
 		return "registration";
 	}
+	
 
+	// This post method registers a user using the form inputs on the resigration.jsp
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public ModelAndView register(User user) throws Exception {
 		user.setAccountBalance(100);
 		UserService userservice = new UserService();
 		userservice.saveUser(user);
 
-		System.out.println("User Created: Username = " + user.getUsername());
-//		System.out.println(user.getUsername()", "+password+", "+lastName+", "+firstName+", "+email);
-
 		ModelAndView modelAndView = new ModelAndView("registration");
 		modelAndView.addObject("AccountCreatedMessage", "Account Created");
 		return modelAndView;
 	}
 
+	// This post method logs in a user using the form inputs on the index.jsp
 	@PostMapping("/login")
 	public static ModelAndView login(String username, String password, HttpSession session, Model model)
 			throws Exception {
-
-		System.out.println("inside login" + username + ",  " + password);
-
-//		UserDAO userDao = new UserDAO();
-//		
-//		boolean loginStatus = userDao.loginSuccess(username, password);
 
 		UserService userService = new UserService();
 
 		User user = userService.login(username, password);
 
-		if (user != null) {
+		//The code checks if the user than logs in is a normal user or admin and it takes them to different pages respectively
+		//A session is also created for the user and the session stores the User logged in so they can nagivate around the website without losing details
+		if (user != null && user.getRole().equals("user")) {
 			ModelAndView modelAndView = new ModelAndView("welcome");
 			modelAndView.addObject("fname", user.getFirstName());
 			modelAndView.addObject("email", user.getEmail());
@@ -82,43 +79,55 @@ public class HomeController {
 			modelAndView.addObject("accountBalance", user.getAccountBalance());
 			session.setAttribute("user", user);
 			return modelAndView;
-		} else {
+		}else if (user != null && user.getRole().equals("admin")){
+			ModelAndView modelAndView = new ModelAndView("adminpage");
+			session.setAttribute("user", user);
+			return modelAndView;
+		}
+		else {
 			ModelAndView modelAndView = new ModelAndView("index");
 			modelAndView.addObject("LoginErrorMessage", "Wrong Credentials");
 			return modelAndView;
 		}
 	}
-
+	//The session only loses the user data after the user/admin clicks logout
 	@GetMapping("/logout")
 	public String logout(HttpSession session) {
 		session.invalidate();
 		return "redirect:/";
 	}
-
+	
+	//This mapping is used to navigate back to the welcome/admin page when the user is logged in it is dependant on is user is a normal user or admin
 	@GetMapping("/welcome")
 	public String welcome(HttpSession session) {
 		User user = (User) session.getAttribute("user");
 		if (user == null) {
 			return "index";
-		} else {
+		}else if (user.getRole().equals("admin")) {
+			return "adminpage";
+		}else {
 			return "welcome";
 		}
 	}
-
+	//THis mapping link can be used to check the current user logged in to see if there is anything in the session
 	@GetMapping("/info")
 	public String userInfo(HttpSession session) {
 		return "user";
 	}
-
+	
+	//Takes you to account balance page
 	@GetMapping("/accountbalance")
 	public String balancePage(HttpSession session) throws Exception {
 		return "accountbalance";
 	}
-
+	
+	//takes you to delete account page
 	@RequestMapping("/deleteaccountpage")
 	public String DELETE(HttpSession session) throws Exception {
 		return "deletion";
 	}
+	
+	//performs the delete account method
 	@PostMapping("/deleteaccount")
 	public ModelAndView DeleteAccount(HttpSession session, String password) throws Exception {
 		User user = (User)session.getAttribute("user");
@@ -134,13 +143,14 @@ public class HomeController {
 		return modelAndView;
 		}
 	}
-
+	//takes you to changeaccountdetails page
 	@RequestMapping("/changedetails")
 	public String changeDetails() {
 
 		return "changeaccountdetails";
 	}
-
+	
+	//performs the changes to the account depending on form fields entered
 	@PostMapping("/accountUpdated")
 	public ModelAndView updateAccount(HttpSession session, String password, String firstName, String email)
 			throws Exception {
@@ -152,16 +162,18 @@ public class HomeController {
 		user.setPassword(password);
 
 		ModelAndView modelAndView = new ModelAndView("changeaccountdetails");
-		modelAndView.addObject("accountUpdated", "Your account has been updated: ");
+		modelAndView.addObject("accountUpdated", "Your account has been updated");
 		return modelAndView;
 	}
 
+	//takes you to shopping page
 	@GetMapping("/shop")
 	public String shopping() {
 		return "shop";
 	}
 
-	@RequestMapping(value = "/buy", method = RequestMethod.POST)
+	//performs a buying operation when the user buys something from the shop
+	@PostMapping ("/buy")
 	public ModelAndView itemsBought(HttpSession session, int productID, Product product) throws Exception {
 		ProductService productService = new ProductService();
 		Product product1 = productService.checkProductStock(product, productID);
@@ -182,4 +194,60 @@ public class HomeController {
 		}
 
 	}
-}
+	//This mapping takes you to an admin page when user logs in as an admin -- method is seen later
+//		@RequestMapping("/adminpage")
+//		public String admin() {
+//			
+//			return "adminpage";
+//		}
+	//Within admin account the admin can view stocks by clicking replenish stocks which uses this mapping to return stocks.jsp
+		@RequestMapping("/stocks")
+		public String stockUpdate() {
+			
+			return "stocks";
+		}
+		
+	//Within admin account the admin can view all users in DB by clicking view users which uses this mapping to return viewusers.jsp
+		@RequestMapping("/viewallusers")
+		public String viewUsers() {
+			
+			return "viewusers";
+		}
+		//mapping takes you to add products page
+		@RequestMapping("/addProduct")
+		public String addProducts() {
+			
+			return "addproduct";
+		}
+	
+	//This mapping is the action performed when admin clicks add stock on stocks page which adds 1 to unitCount
+	@PostMapping("/replenishStock")
+		public ModelAndView stockUpdated(Product product, int productID) throws Exception {
+			ProductService productService = new ProductService();
+			product = productService.replenishStock(product, productID);
+				ModelAndView modelandview = new ModelAndView("stocks");
+				modelandview.addObject("stockUpdated", product.getName() + " stock has been updated");
+				return modelandview;
+			} 
+	
+	//This mapping is the action performed when admin clicks change role on viewusers page. It changes role from user to admin or admin to user depending on current role.
+	@PostMapping("/updateUserRole")
+	public ModelAndView updateRoles(String username) throws Exception {
+		UserService userService = new UserService();
+		userService.updateUserRole(username);
+			ModelAndView modelandview = new ModelAndView("viewusers");
+			modelandview.addObject("roleUpdated", username + "'s role has been updated");
+			return modelandview;
+		} 
+	
+	//This mapping is the action performed when admin wishes to add a new product from addproduct page
+	@PostMapping("createProduct")
+	public ModelAndView productAdd(Product product) throws Exception {
+		ProductService productService = new ProductService();
+		productService.saveProduct(product);
+
+		ModelAndView modelAndView = new ModelAndView("addproduct");
+		modelAndView.addObject("ProductAdded", "Product: " + product.getName() + " added");
+		return modelAndView;
+	}
+	}

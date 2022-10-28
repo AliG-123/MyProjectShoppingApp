@@ -11,7 +11,7 @@
 	crossorigin="anonymous">
 </head>
 <body>
-	<h1 align="center">Welcome to Cohart20 Ecommerce Application</h1><br><br>
+	<h1 align="center">Welcome to Ali's Shop</h1><br><br>
 		
 		<h3 align="center" style = "color: Blue">Enter your credentials!!</h3>
 

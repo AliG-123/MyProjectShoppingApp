@@ -15,7 +15,7 @@
 	crossorigin="anonymous">
 </head>
 <body>
-<div style = "font-size:40px">
+<div style = "font-size:25px">
 	<div class="card text-center">
 	  <div class="card-header">
 	    <ul class="nav nav-pills card-header-pills">
@@ -41,15 +41,19 @@
 	  </div>
   </div>
 </div>
+<div style="font-size:30px" align = "right">
+  <a style = "color: blue">Logged in User: </a>
+  <a style = "color: red">${user.username}</a>
+  </div>
 
-<div style = "font-size:40px">
-<h1 align = "center">Update account details</h1><br><br>
+<div style = "font-size:25px">
+<h1 align = "center">Update account details</h1>
 
 <h3 align = "center" style = "color: Blue">Enter your up-to-date details</h3>
 
 	<form align = "center" action="accountUpdated" method="post">
 		<div align= "center" style="margin-left: 500px; margin-right: 500px" class="form-group">
-			<div style = "font-size:40px" class="form-group">
+			<div style = "font-size:25px" class="form-group">
 				<label for="exampleInputPassword1">Password</label> <input
 					type="password" class="form-control"
 					placeholder="Password" name="password">

@@ -15,7 +15,11 @@ pageEncoding="ISO-8859-1"%>
         <h1>First Name ${user.firstName}</h1>
         <h1>User Email: ${user.email}</h1>
         <h1>Account Balance: ${user.accountBalance}</h1>
-        <a href="/logout">Log out</a><br>
+        <h1>Role: ${user.role}</h1>
+        <div style = "fontsize:30px">
+        <a href="/welcome">Home</a><br>
+        <a href="/logout">Log out </a>
+        </div>
 	</div>
     </body>
 </html>

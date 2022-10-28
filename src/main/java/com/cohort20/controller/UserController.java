@@ -14,15 +14,15 @@ import com.cohort20.to.User;
 public class UserController {
 	
 
-		@RequestMapping("/getUserDetails/{uid}")
-		public User getUser(@PathVariable String uid) throws Exception {
-			
-			UserService userService = new UserService();
-			
-			User user = userService.getUser(uid);
-			
-			return user;
-		}
+//		@RequestMapping("/getUserDetails/{uid}")
+//		public User getUser(@PathVariable String uid) throws Exception {
+//			
+//			UserService userService = new UserService();
+//			
+//			User user = userService.getUser(uid);
+//			
+//			return user;
+//		}
 		
 		@RequestMapping("/getAllUsers")
 		public List<User> getUsers() throws Exception {

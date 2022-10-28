@@ -76,7 +76,7 @@ public class UserDao {
 		ResultSet rs = pstmt.executeQuery();
 
 		if (rs.next()) {
-			user = (new User(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getInt(6)));
+			user = (new User(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getDouble(6)));
 		}
 		return user;
 	}
@@ -89,7 +89,7 @@ public class UserDao {
 		ResultSet rs = pstmt.executeQuery();
 		User user = null;
 		if (rs.next()) {
-			user = (new User(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getInt(6)));
+			user = new User(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4),rs.getString(5), rs.getInt(6));
 		}
 		return user;
 
@@ -108,6 +108,25 @@ public class UserDao {
 		pstmt.setString(3, email);
 		pstmt.setString(4, username);
 		pstmt.executeUpdate();
+	}
+	
+	public void updateRole(String username) throws Exception {
+		System.out.println(username);
+		Connection conn = DBUtils.getConnection();
+		PreparedStatement pstmt = conn.prepareStatement("select * from users where username = ?");
+		pstmt.setString(1, username);
+		ResultSet urs = pstmt.executeQuery();
+		urs.next();
+		pstmt = conn.prepareStatement("update users set role = ? where username = ?");
+		if(urs.getString(5).equals("user")) {
+			pstmt.setString(1, "admin");
+			pstmt.setString(2, username);
+			pstmt.executeUpdate();
+		}else {
+			pstmt.setString(1, "user");
+			pstmt.setString(2, username);
+			pstmt.executeUpdate();
+		}
 	}
 		
 	public void updateAccountBalance(Double accountBalance, String username) throws Exception {
