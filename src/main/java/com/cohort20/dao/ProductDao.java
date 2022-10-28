@@ -10,6 +10,7 @@ import com.cohort20.to.User;
 
 public class ProductDao {
 
+	//This method finds the product in the database when input of product ID is given
 	public Product selectProduct(int productID) throws Exception {
 		Connection conn = DBUtils.getConnection();
 		PreparedStatement pstmt = conn.prepareStatement("select * from product where productID = ?");
@@ -21,14 +22,6 @@ public class ProductDao {
 		}
 		return product;
 	}
-	
-//	public void updateStockCount(Integer productID, Integer unitCount) throws Exception {
-//		Connection conn = DBUtils.getConnection();
-//		PreparedStatement pstmt = conn.prepareStatement("update product set unitCount = ? where productID = ?");
-//		pstmt.setInt(1, unitCount.intValue());
-//		pstmt.setInt(2, productID.intValue());
-//		pstmt.executeUpdate();
-//}
 	
 	public Product updateStock(Product product, int productID) throws Exception {
 		Connection conn = DBUtils.getConnection();

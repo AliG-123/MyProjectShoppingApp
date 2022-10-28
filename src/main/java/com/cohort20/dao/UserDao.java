@@ -35,7 +35,7 @@ public class UserDao {
 
 	}
 
-
+	//This method is used to create the user from the registration page by taking in the form fields.
 	public void createUser(User user) throws Exception {
 		Connection conn = DBUtils.getConnection();
 		PreparedStatement pstmt = conn.prepareStatement("insert into users values (?,?,?,?,?,?) ");
@@ -51,6 +51,7 @@ public class UserDao {
 
 	}
 
+	//This method is used to confirm user credentials from the login page to successfully log them in
 	public User loginSuccess(String username, String password) throws Exception {
 
 		
@@ -70,7 +71,8 @@ public class UserDao {
 		}
 		return user;
 	}
-
+	
+	//This method is used to confirm user credentials from the login page to successfully log them in
 	public User getUser(String username, String password) throws Exception {
 		Connection conn = DBUtils.getConnection();
 		PreparedStatement pstmt = conn.prepareStatement("select * from users where username = ? and password = ?");
@@ -84,12 +86,14 @@ public class UserDao {
 		return user;
 
 	}
+	//This method is used to delete the user from the database
 	public void deleteUserrow(String username) throws Exception {
 		Connection conn = DBUtils.getConnection();
 		PreparedStatement pstmt = conn.prepareStatement("delete from users where username = ?");
 		pstmt.setString(1, username);
 		pstmt.executeUpdate();
 	}
+	//This method is used to update the user details on the database
 	public void updateUserInfo(String password, String firstName,String email, String username) throws Exception {
 		Connection conn = DBUtils.getConnection();
 		PreparedStatement pstmt = conn.prepareStatement("update users set firstName = ?, password = ?, email = ? where username = ?");
@@ -99,7 +103,7 @@ public class UserDao {
 		pstmt.setString(4, username);
 		pstmt.executeUpdate();
 	}
-	
+	//This method is used to update the role of the user on the database
 	public void updateRole(String username) throws Exception {
 		System.out.println(username);
 		Connection conn = DBUtils.getConnection();
@@ -118,7 +122,7 @@ public class UserDao {
 			pstmt.executeUpdate();
 		}
 	}
-		
+	//This method is used to update the account balance of a user when they purchase items from the shop
 	public void updateAccountBalance(Double accountBalance, String username) throws Exception {
 			Connection conn = DBUtils.getConnection();
 			PreparedStatement pstmt = conn.prepareStatement("update users set accountBalance = ? where username = ?");
