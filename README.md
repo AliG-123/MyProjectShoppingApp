@@ -158,6 +158,25 @@ This is the my final project(Shopping API) of QA Software Development Bootcamp w
   
   
   </details>
+   </details>
+  
+  <details>
+    
+  <summary> Admin Updating user roles </summary>
+   
+  > View all users Page Before - GET method
+    
+  ![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/ViewingAllUsers(admin).png?raw=true)
+    
+  > Changning user roles - POST method
+    
+  ![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/ChangingRoles.png?raw=true)
+  
+   > MySQL after user role changed
+    
+  ![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/MySQLRoleUpdated.png?raw=true)
+  
+  </details>
   </details>
   
 <details>
