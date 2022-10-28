@@ -115,10 +115,19 @@ This is the my final project(Shopping API) of QA Software Development Bootcamp w
   
 ![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/ChangeAccountDetailsPage.png?raw=true)
 
+  
+>MySQL before update
+  
+![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/PostmanMySQLBeforeUpdate.png?raw=true)
+
 >Change Details (Only for logged in user) - POST Method
   
 ![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/PostmanAccountUpdated.png?raw=true)
- 
+
+
+>MySQL after update
+  
+![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/PostmanMySQLAfterUpdate.png?raw=true)
 </details>
 
 <details>
