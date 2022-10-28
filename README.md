@@ -26,7 +26,7 @@ This is the my final project(Shopping API) of QA Software Development Bootcamp w
 <details>
 <summary> User Table Structure </summary>
   
-![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/FinalProjectShoppingApp/UserDatabaseStructure.png?raw=true)
+![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/UserDatabaseStructure.png?raw=true)
  </details
   
 ## Methods
