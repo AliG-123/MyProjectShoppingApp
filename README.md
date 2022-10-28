@@ -37,9 +37,12 @@ This is the my final project(Shopping API) of QA Software Development Bootcamp w
 
 ## How I expected the challenge to go.
 
+
+
 ## What went well? / What didn't go as planned?
 
 ## Possible improvements for future revisions of the project.
+The future improvement for this Shopping API will be to include testing and achieve over 90% coverage. I would also like to include more functionality such as topping up account balance and also creating entity relationships to the accounts and add an orders section.
 
 ## Database
 <details>
