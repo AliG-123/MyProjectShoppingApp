@@ -24,10 +24,17 @@ This is the my final project(Shopping API) of QA Software Development Bootcamp w
 
 ## Database
 <details>
-<summary> User Table Structure </summary>
+<summary> User Database Structure </summary>
   
 ![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/UserDatabaseStructure.png?raw=true)
- </details
+</details
+ 
+<details>
+<summary> Product Database Structure </summary>
+  
+![](https://github.com/AliG-123/MyProjectShoppingApp/blob/main/Final%20Project%20Shopping%20App/ProductDatabaseStructure.png?raw=true)
+</details>
+ 
   
 ## Methods
 
