@@ -60,6 +60,9 @@ The future improvement for this Shopping API will be to include testing and achi
   
 ## Methods available in API
 
+<details>
+  <summary>Registration and Login</summary>
+  
 The homepage is a login page where a user can login to their account or go to another page to register and create an account.
 
 To create an account user must enter the following fields:
@@ -69,9 +72,11 @@ To create an account user must enter the following fields:
 * Last Name (This is not stored)
 * Email
 
-Data is then stored in MySQL database and the user is given the role "user" and an account balance of £100
+Data is then stored in MySQL database and the user is given the role "user" and an account balance of £100.
 
-The user can login if an account exists in the database and they will be taken to a normal user page or an admin page depending on if they have the role "user" or "admin"
+If user chooses to login the username and password must match an account on the database if there is no match an incorrect credentials message will be displayed. If successful they will be taken to a normal user page or an admin page depending on if they have the role "user" or "admin"
+ 
+</details>
 
 <details>
 <summary>User APIs</summary>
@@ -95,7 +100,7 @@ The user can login if an account exists in the database and they will be taken t
 
 </details>
 
-## Screenshots: POSTMAN requests and utput from the API and MySQL database
+## Screenshots: POSTMAN requests and outputs from the API and MySQL database
 
 <details>
 <summary> Create </summary>
