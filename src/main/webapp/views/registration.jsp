@@ -39,7 +39,7 @@
 					 placeholder="Enter Last Name" name="lastName">
 			</div>
 			<div>
-				<label for="exampleInputEmail1">Email</label> <input type="text"
+				<label for="exampleInputEmail1">Email</label> <input type="email"
 					class="form-control"
 					 placeholder="Enter Email Address" name="email">
 			</div>
